@@ -6,8 +6,10 @@
   "scripts": {
     "cy:run": "cypress run",
     "cy:cloud": "cypress run --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    
     "cy:positive:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --record --key ebb8d895-c693-4a98-888b-420f07abc042",
     "cy:negative:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    
     "cy:positive_electron:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --record --key ebb8d895-c693-4a98-888b-420f07abc042",
     "cy:positive_chrome:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --record --key ebb8d895-c693-4a98-888b-420f07abc042",
     "cy:negative_electron:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --record --key ebb8d895-c693-4a98-888b-420f07abc042",
