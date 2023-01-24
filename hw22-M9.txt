@@ -1,6 +1,12 @@
 -----------------------------------------------
 Домашнее задание 22.1.  (50 баллов) . Срок сдачи задания - до 24.01
+------
+Jenkins run: java -jar jenkins.war -hhtpsPort=8080 --enable-future-java
 
+Please use the following password to proceed to installation:
+4c61c381a4904a0f873bbbc6bdad7682
+This may also be found at: /Users/roman/.jenkins/secrets/initialAdminPassword
+------
 Возьмите любой из ваших проектов (минимум 2 спек файла или разбейте/добавьте еще) 
 и организуйте параллельный прогон тестов с результатами на дашборде через Jenkins.
 shell команда запуска должна содержать автоматически изменяемый номер билда 
@@ -11,3 +17,9 @@ shell команда запуска должна содержать автома
 кодом заведите баг-репорт в разделе Issues.
 
 Приложите ссылку на репозиторий с кодом, ссылку на прогон на дашборде и скрин прогона билда в Jenkins.
+
+
+
+echo "BUILD_NUMBER":: $BUILD_NUMBER
+-$BUILD_NUMBER 
+-$BUILD_ID
