@@ -5,22 +5,22 @@
   "main": "index.js",
   "scripts": {
     "cy:run": "cypress run",
-    "cy:cloud": "cypress run --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:cloud": "cypress run --record --key 79a13abb-bc01-4184-938a-77774a279775",
     
-    "cy:positive:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:negative:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:negative:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --record --key 79a13abb-bc01-4184-938a-77774a279775",
     
-    "cy:positive_electron:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:positive_chrome:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:negative_electron:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:negative_chrome:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive_electron:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:positive_chrome:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:negative_electron:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:negative_chrome:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --record --key 79a13abb-bc01-4184-938a-77774a279775",
     
-    "cy:positive_electron24:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --config-file cypress24.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:positive_chrome13:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --config-file cypress13.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:negative_electron24:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --config-file cypress24.config.js--record --key ebb8d895-c693-4a98-888b-420f07abc042",
-    "cy:negative_chrome13:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --config-file cypress13.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive_electron24:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --config-file cypress24.config.js --record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:positive_chrome13:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --config-file cypress13.config.js --record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:negative_electron24:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --config-file cypress24.config.js--record --key 79a13abb-bc01-4184-938a-77774a279775",
+    "cy:negative_chrome13:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --config-file cypress13.config.js --record --key 79a13abb-bc01-4184-938a-77774a279775",
     
-    "cy:parallel:pe24_nc13:cloud": "npm run cy:positive_electron24:cloud -- --group pe24 --ci-build-id 01 --parallel & npm run cy:negative_chrome13:cloud -- --group nc13 --ci-build-id 1 --parallel"
+    "cy:parallel:pe24_nc13:cloud": "npm run cy:positive_electron24:cloud -- --group positive_electron24 --ci-build-id 10 --parallel & npm run cy:negative_chrome13:cloud -- --group negative_chrome13 --ci-build-id 10 --parallel"
   },
   "repository": {
     "type": "git",

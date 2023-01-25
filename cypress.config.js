@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-	projectId: "junumb",
+	projectId: "mczp8t",
 	video: false,
 	e2e: {
 		baseUrl: 'https://santa-secret.ru/',
