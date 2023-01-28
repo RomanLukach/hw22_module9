@@ -1,11 +1,21 @@
 -----------------------------------------------
 Домашнее задание 22.1.  (50 баллов) . Срок сдачи задания - до 24.01
 ------
-Jenkins run: java -jar jenkins.war -hhtpsPort=8080 --enable-future-java
+Cypress:
+b956873+2@gmail.com / b956873+2
+projectId: "mczp8t" / --key 79a13abb-bc01-4184-938a-77774a279775
 
-Please use the following password to proceed to installation:
-4c61c381a4904a0f873bbbc6bdad7682
+Jenkins run: java -jar jenkins.war -hhtpsPort=8080 -Dfile.encoding=UTF8 --enable-future-java
+
+Please use the following password to proceed to installation: 4c61c381a4904a0f873bbbc6bdad7682
 This may also be found at: /Users/roman/.jenkins/secrets/initialAdminPassword
+
+hw-22-cypress
+/Users/roman/Personal/AutoQA/Home_works/HW22-M9/
+npm install
+npm run cy:positive_electron24:cloud -- --group positive_electron24 "BUILD_ID"=$BUILD_ID "BUILD_NUMBER"=$BUILD_NUMBER --parallel
+npm run cy:negative_chrome13:cloud -- --group negative_chrome13 "BUILD_ID"=$BUILD_ID "BUILD_NUMBER"=$BUILD_NUMBER --parallel
+
 ------
 Возьмите любой из ваших проектов (минимум 2 спек файла или разбейте/добавьте еще) 
 и организуйте параллельный прогон тестов с результатами на дашборде через Jenkins.
@@ -18,8 +28,12 @@ shell команда запуска должна содержать автома
 
 Приложите ссылку на репозиторий с кодом, ссылку на прогон на дашборде и скрин прогона билда в Jenkins.
 
+_____________
+VERY IMPORTANT:
+For correct display of reports before each command need to put NO_COLOR=1:
+"cy:positive_electron24:cloud": "NO_COLOR=1 cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --config-file cypress24.config.js --record --key 79a13abb-bc01-4184-938a-77774a279775",
+Otherwise, Jenkins will not recognize correctly colors provided by Cypress and 
+all reports will not be correctly displyed.
+Do not forget to sync updated package.json file to github, otherwise it will not work.
 
 
-echo "BUILD_NUMBER":: $BUILD_NUMBER
--$BUILD_NUMBER 
--$BUILD_ID
