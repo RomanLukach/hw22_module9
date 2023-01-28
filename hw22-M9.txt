@@ -29,7 +29,7 @@ shell команда запуска должна содержать автома
 Приложите ссылку на репозиторий с кодом, ссылку на прогон на дашборде и скрин прогона билда в Jenkins.
 
 _____________
-VERY IMPORTANT:
+VERY IMPORTANT (for MAC):
 For correct display of reports before each command need to put NO_COLOR=1:
 "cy:positive_electron24:cloud": "NO_COLOR=1 cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --config-file cypress24.config.js --record --key 79a13abb-bc01-4184-938a-77774a279775",
 Otherwise, Jenkins will not recognize correctly colors provided by Cypress and 
